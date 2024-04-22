@@ -1,0 +1,38 @@
+.body-class {
+    background-color: #f0f0f0; /* Subtle background color */
+}
+
+.header-class {
+    background-color: #333; /* Contrasting background color */
+    color: #fff; /* White font color for better visibility */
+}
+
+.nav-class {
+    background-color: #444; /* Different background color */
+    color: #fff; /* Font color */
+}
+
+.nav-class a.active {
+    font-weight: bold; /* Active page link bold */
+}
+
+.title-class, .section-title-class {
+    color: #007bff; /* Distinct colors for headings */
+}
+
+.text-class {
+    color: #555; /* Font color contrasting well with background */
+}
+
+.image-class {
+    border: 1px solid #ccc; /* Border color complementing design */
+}
+
+.form-class, .button-class {
+    /* Style form fields and submit buttons with cohesive colors */
+}
+
+.footer-class {
+    background-color: #666; /* Distinct footer background */
+    color: #fff; /* Footer font color */
+}

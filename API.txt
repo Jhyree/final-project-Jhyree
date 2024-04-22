@@ -1,0 +1,36 @@
+// Define the URL of the VolunteerMatch API endpoint
+const apiUrl = 'https://api.volunteermatch.org/searchOpportunities';
+
+// Set up parameters for the API request (you may need an API key)
+const params = {
+  api_key: 'YOUR_API_KEY', // Replace with your actual API key
+  format: 'json',
+  location: 'San Francisco', // Example location, you can change this
+  keywords: 'charity,volunteer', // Example keywords, you can change this
+  radius: '10', // Example radius in miles, you can change this
+};
+
+// Construct the query string from the parameters
+const queryString = new URLSearchParams(params).toString();
+
+// Construct the full URL with the query string
+const fullUrl = `${apiUrl}?${queryString}`;
+
+// Make the HTTP GET request to fetch data from the API
+fetch(fullUrl)
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Failed to fetch data');
+    }
+    return response.json();
+  })
+  .then(data => {
+    // Handle the fetched data and display it on your website
+    console.log(data);
+  })
+  .catch(error => {
+    // Handle errors, e.g., API downtime or request timeouts
+    console.error('Error fetching data:', error.message);
+    // Display a user-friendly error message on your website
+    // Example: document.getElementById('error-message').innerText = 'Failed to fetch data. Please try again later.';
+});
